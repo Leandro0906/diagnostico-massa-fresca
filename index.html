@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico Operacional – Massa Fresca | AutoDigit</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #2d3748;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #2c5282;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .intro {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-size: 15px;
+    }
+    .intro ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .section h2 {
+      margin-top: 0;
+      color: #2b6cb0;
+      font-size: 20px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+    label {
+      display: block;
+      margin: 14px 0 6px;
+      font-weight: 600;
+      color: #4a5568;
+    }
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+    .btn-submit {
+      background: #3182ce;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 17px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: #2c5282;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #718096;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Diagnóstico Operacional – Massa Fresca</h1>
+
+  <div class="intro">
+    <p>Olá! Este questionário rápido (5–8 minutos) nos ajudará a entender os principais desafios da Massa Fresca nas áreas de <strong>RH, Logística, Estoque e Contabilidade</strong>.</p>
+    <p>Com base nas suas respostas, vamos personalizar uma solução com <strong>agentes especializados de IA</strong> capazes de:</p>
+    <ul>
+      <li>Reduzir custos operacionais em até <strong>40%</strong></li>
+      <li>Liberar <strong>85 horas por semana</strong> da equipe</li>
+      <li>Eliminar erros manuais (média atual: 6/mês)</li>
+      <li>Garantir retorno do investimento em apenas <strong>2,6 meses</strong></li>
+    </ul>
+    <p>Todas as respostas são confidenciais e usadas exclusivamente para criar uma proposta sob medida.</p>
+  </div>
+
+  <form id="diagnostico-form">
+
+    <!-- Informações Iniciais -->
+    <div class="section">
+      <h2>Informações Iniciais</h2>
+      <label for="nome">Nome completo *</label>
+      <input type="text" id="nome" required>
+
+      <label for="cargo">Cargo na Massa Fresca *</label>
+      <input type="text" id="cargo" required>
+
+      <label for="colaboradores">Quantos colaboradores atuam hoje na operação (produção, entrega e administração)?</label>
+      <input type="number" id="colaboradores" min="1">
+    </div>
+
+    <!-- RH – 10 perguntas -->
+    <div class="section">
+      <h2>Recursos Humanos (RH)</h2>
+      <label for="q1">1. Quanto tempo leva, em média, para integrar um novo funcionário (do primeiro dia até estar plenamente operante)?</label>
+      <input type="text" id="q1" placeholder="Ex.: 2 dias, 1 semana">
+
+      <label for="q2">2. Como é feito o controle de ponto dos colaboradores?</label>
+      <input type="text" id="q2">
+
+      <label for="q3">3. Quantas horas por mês alguém gasta conferindo ponto, faltas ou justificativas?</label>
+      <input type="text" id="q3">
+
+      <label for="q4">4. Já houve problemas com benefícios (plano de saúde, vale) por erro no cadastro inicial?</label>
+      <textarea id="q4"></textarea>
+
+      <label for="q5">5. Como vocês lidam com faltas frequentes ou ausências não comunicadas?</label>
+      <textarea id="q5"></textarea>
+
+      <label for="q6">6. O processo de desligamento de um colaborador é padronizado? Quanto tempo leva?</label>
+      <input type="text" id="q6">
+
+      <label for="q7">7. Vocês já tiveram retrabalho por inconsistência em documentos trabalhistas (CTPS, eSocial, etc.)?</label>
+      <textarea id="q7"></textarea>
+
+      <label for="q8">8. A equipe administrativa perde muito tempo com tarefas repetitivas de RH (gerar avisos, calcular férias, etc.)?</label>
+      <textarea id="q8"></textarea>
+
+      <label for="q9">9. Atualmente, quanto tempo leva o onboarding completo de um novo colaborador?</label>
+      <input type="text" id="q9">
+
+      <label for="q10">10. Se pudesse automatizar UMA tarefa de RH, qual seria?</label>
+      <textarea id="q10"></textarea>
+    </div>
+
+    <!-- Logística – 10 perguntas -->
+    <div class="section">
+      <h2>Logística e Pedidos</h2>
+      <label for="q11">11. Por quais canais vocês recebem pedidos hoje (iFood, WhatsApp, balcão, etc.)?</label>
+      <input type="text" id="q11">
+
+      <label for="q12">12. Quanto tempo leva, em média, para um pedido ser registrado, confirmado e encaminhado para produção/entrega?</label>
+      <input type="text" id="q12">
+
+      <label for="q13">13. Vocês já perderam pedidos por falha na comunicação entre canais (ex.: mensagem no WhatsApp não anotada)?</label>
+      <textarea id="q13"></textarea>
+
+      <label for="q14">14. Como definem as rotas de entrega?</label>
+      <input type="text" id="q14">
+
+      <label for="q15">15. Clientes frequentemente entram em contato para saber “onde está meu pedido”?</label>
+      <textarea id="q15"></textarea>
+
+      <label for="q16">16. Conseguem prever com antecedência a demanda em dias de pico (sexta, sábado, feriados)?</label>
+      <input type="text" id="q16">
+
+      <label for="q17">17. Há desperdício de combustível ou tempo por rotas ineficientes?</label>
+      <textarea id="q17"></textarea>
+
+      <label for="q18">18. Quantas horas por semana alguém passa só organizando pedidos e coordenando entregas?</label>
+      <input type="text" id="q18">
+
+      <label for="q19">19. Qual é o maior custo ou perda que vocês veem na logística hoje?</label>
+      <textarea id="q19"></textarea>
+
+      <label for="q20">20. Se você pudesse melhorar UM ponto da logística, qual seria?</label>
+      <textarea id="q20"></textarea>
+    </div>
+
+    <!-- Estoque – 10 perguntas -->
+    <div class="section">
+      <h2>Gestão de Estoque</h2>
+      <label for="q21">21. Como é feito o controle de estoque hoje?</label>
+      <input type="text" id="q21">
+
+      <label for="q22">22. Já aconteceu de faltar farinha, ovos ou outro ingrediente essencial no meio do expediente?</label>
+      <textarea id="q22"></textarea>
+
+      <label for="q23">23. Com que frequência sobram ingredientes que acabam vencendo? Isso gera muito desperdício?</label>
+      <textarea id="q23"></textarea>
+
+      <label for="q24">24. Vocês têm critério claro para decidir QUANDO e QUANTO comprar de cada item?</label>
+      <input type="text" id="q24">
+
+      <label for="q25">25. Conseguem ver, em tempo real, quanto têm de cada insumo disponível?</label>
+      <input type="text" id="q25">
+
+      <label for="q26">26. Já houve prejuízo por usar produto vencido sem perceber?</label>
+      <textarea id="q26"></textarea>
+
+      <label for="q27">27. Como ajustam o estoque em épocas de maior demanda (Natal, Páscoa, festas)?</label>
+      <textarea id="q27"></textarea>
+
+      <label for="q28">28. Quanto do capital da empresa fica “preso” em estoque parado ou excedente?</label>
+      <input type="text" id="q28">
+
+      <label for="q29">29. A equipe perde tempo procurando itens no depósito ou conferindo validade?</label>
+      <textarea id="q29"></textarea>
+
+      <label for="q30">30. Se você tivesse um “alerta automático” sobre algo no estoque, o que gostaria que ele avisasse?</label>
+      <textarea id="q30"></textarea>
+    </div>
+
+    <!-- Contabilidade – 10 perguntas -->
+    <div class="section">
+      <h2>Contabilidade e Finanças</h2>
+      <label for="q31">31. Quanto tempo leva para fechar as contas do mês (conciliar vendas, despesas, impostos)?</label>
+      <input type="text" id="q31">
+
+      <label for="q32">32. Vocês usam contador externo? Ele costuma corrigir muitos lançamentos errados?</label>
+      <textarea id="q32"></textarea>
+
+      <label for="q33">33. Já pagaram multa por atraso em guia (DAS, FGTS, ISS, etc.) ou erro de classificação fiscal?</label>
+      <textarea id="q33"></textarea>
+
+      <label for="q34">34. Como conciliam as vendas do iFood, WhatsApp e balcão com o financeiro? É tudo manual?</label>
+      <textarea id="q34"></textarea>
+
+      <label for="q35">35. Conseguem ver, diariamente, qual foi o lucro líquido do dia?</label>
+      <input type="text" id="q35">
+
+      <label for="q36">36. Gastam muito tempo digitando extratos bancários ou lançando despesas?</label>
+      <textarea id="q36"></textarea>
+
+      <label for="q37">37. Já tiveram surpresa desagradável no fim do mês por falta de controle de fluxo de caixa?</label>
+      <textarea id="q37"></textarea>
+
+      <label for="q38">38. As obrigações acessórias (ECF, DCTFWeb, SPED) são feitas com tranquilidade ou viram “corrida contra o tempo”?</label>
+      <textarea id="q38"></textarea>
+
+      <label for="q39">39. Vocês sabem, com precisão, qual canal (iFood, balcão, WhatsApp) dá mais lucro?</label>
+      <textarea id="q39"></textarea>
+
+      <label for="q40">40. Se um “robô” pudesse assumir uma tarefa contábil chata, qual você delegaria primeiro?</label>
+      <textarea id="q40"></textarea>
+    </div>
+
+    <!-- Próximos passos -->
+    <div class="section">
+      <h2>Próximos Passos</h2>
+      <label>
+        <input type="checkbox" id="demo"> Gostaria de agendar uma demonstração gratuita com os dados reais da Massa Fresca.
+      </label>
+      <label for="contato">WhatsApp ou e-mail para contato (opcional):</label>
+      <input type="text" id="contato" placeholder="(41) 99999-9999 ou email@exemplo.com">
+    </div>
+
+    <button type="submit" class="btn-submit">Enviar Diagnóstico</button>
+  </form>
+
+  <footer>
+    <p>AutoDigit – CNPJ: 63.335.071/0001-65<br>
+    Soluções de IA para negócios que querem escalar com eficiência e controle.</p>
+  </footer>
+
+  <script>
+    document.getElementById('diagnostico-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('✅ Obrigado pelo seu diagnóstico!\n\nCom base nas suas respostas, prepararemos uma demonstração personalizada dos agentes de IA para a Massa Fresca.\n\nEntraremos em contato em breve!');
+    });
+  </script>
+</body>
+</html>
